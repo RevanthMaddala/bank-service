@@ -1,0 +1,21 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "bank-service",
+      "runtimeExecutable": "C:\\Users\\revan\\.m2\\wrapper\\dists\\apache-maven-3.9.16\\0daed3be3ebd1c706f0e69e8b07c6b73f5cc4ea3dfce72a8d0ec2e849ca2ddb0\\bin\\mvn.cmd",
+      "runtimeArgs": ["-B", "spring-boot:run", "-Dspring-boot.run.arguments=--server.port=8081"],
+      "port": 8081
+    },
+    {
+      "name": "bank-service-postgres",
+      "runtimeExecutable": "C:\\Users\\revan\\.m2\\wrapper\\dists\\apache-maven-3.9.16\\0daed3be3ebd1c706f0e69e8b07c6b73f5cc4ea3dfce72a8d0ec2e849ca2ddb0\\bin\\mvn.cmd",
+      "runtimeArgs": [
+        "-B", "spring-boot:run",
+        "-Dspring-boot.run.profiles=prod",
+        "-Dspring-boot.run.arguments=--server.port=8081 --spring.datasource.url=jdbc:postgresql://localhost:5432/bankdb --spring.datasource.username=bank --spring.datasource.password=bank --springdoc.api-docs.enabled=true --springdoc.swagger-ui.enabled=true"
+      ],
+      "port": 8081
+    }
+  ]
+}
